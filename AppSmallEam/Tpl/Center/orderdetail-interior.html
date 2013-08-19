@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>个人中心</title>
+    <link media="screen" type="text/css" rel="stylesheet" href="../Public/css/orderdetail-interior.css"/>
+    <!---->
+</head>
+
+
+<body>
+<div id="wrapper">
+    <!--头部 begin-->
+    <include file="./App_Shares/Tpl/Index/header.html"/>
+    <!--头部 end-->
+
+    <!--中心-->
+    <div id="center">
+        <div class="select">                 <!--左选择框-->
+            <div class="select_size">           <!--我的资料-->
+                <a href="{:U('Center/personal')}" class="select1"></a>
+            </div>
+            <div class="select_size">           <!--我的订单-->
+                <a href="{:U('Center/orders')}"><img src="../Public/images/select6-1.jpg"/></a>
+            </div>
+            <div class="select_size">           <!--安全中心-->
+                <a href="#" class="select2"></a>
+            </div>
+            <div class="select_size">            <!--余额管理-->
+                <a href="#" class="select3"></a>
+            </div>
+            <div class="select_size">            <!--我要推广-->
+                <a href="#" class="select4"></a>
+            </div>
+            <div class="select_size">            <!--帮助中心-->
+                <a href="#" class="select5"></a>
+            </div>
+        </div>
+        <div class="information">
+            <div class="title"> <!--标题-->
+                <a href="{:U('Center/orders')}" title="返回全部订单">
+                    <div class="return"></div>
+                </a>
+
+            </div>
+
+            <div class="state"><!--状态框-->
+                <table border="0" cellspacing="0">
+                    <tr>
+                        <td colspan="3" class="col_580">订单编号：<span>{$order.orderid}</span></td>
+                        <td rowspan="3" class="col_200">
+                            <div class="state_right_top">支付状态：</div>
+                            <div class="state_right_bottom">
+                                <eq name="order.paystatus" value="0">订单未支付</eq>
+                                <eq name="order.paystatus" value="1">订单已支付</eq>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_247"><label>下单时间：{$order.createtime|date='Y-n-j G:i:s',###}</label></td>
+                        <td class="col_167">进 度：
+                         <span>
+                             <eq name="order.orderstatus" value="beforeauditing">未审核</eq>
+                             <eq name="order.orderstatus" value="auditing">审核中</eq>
+                             <eq name="order.orderstatus" value="processing">处理中</eq>
+                             <eq name="order.orderstatus" value="finished">关闭</eq>
+                        </span>
+                        </td>
+                        <td class="col_167">金 额：<span>￥{$order.realamount}</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="col_580">
+                            收件地址：<span>{$order.receiveraddress}({$order.receiverzipcode})</span> <span>{$order.receivername}({$order.receivermobile})</span>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+
+           <form action="">
+            <div class="block">
+                <div class="subtitle">
+                    <span class="subtitle_left">订单明细</span>
+                    <span class="subtitle_right">
+                        <div class="btn btn_100">
+                            <input type="submit" value="修 改" />
+                        </div>
+                    </span>
+                </div>
+                
+                <!--表格-->
+                <div class="tableone">
+                <table border="0"  cellspacing="0">
+                   <tr><!--1-->
+                       <td class="col_80">明细ID:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="123456789"/></td>
+                       <td class="col_80">姓 名:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="张三"/></td>
+                   </tr>
+                   
+                   <tr><!--2-->
+                       <td class="col_80">订单ID:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">性别:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="男"/></td>
+                   </tr>                   
+                   <tr><!--3-->
+                       <td class="col_80">序号:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="001"/></td>
+                       <td class="col_80">学籍号:</td> 
+                       <td class="col_300"><input type="text" readonly  class="" value="43060216168456"/></td>
+                   </tr>
+                   <tr><!--4-->
+                      <td class="col_80">产品ID:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">身份证号:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="430601201951645646161"/></td>
+                   </tr>
+                   <tr><!--5-->
+                       <td class="col_80">产品数量:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="100"/></td>
+                       <td class="col_80">学校名称:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="北大"/></td>
+                   </tr>
+                   <tr><!--6-->
+                       <td class="col_80">供货商ID:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">学校ID:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                   </tr>
+                   <tr><!--7-->
+                       <td class="col_80">产品编码:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">地区码:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                   </tr>
+                   <tr><!--8-->
+                       <td class="col_80">产品名称:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="照片制作"/></td>
+                       <td class="col_80">校 别:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="国制"/></td>
+                   </tr>
+                   <tr><!--9-->
+                       <td class="col_80">折 扣:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="50%"/></td>
+                       <td class="col_80">地 址:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="北京市海淀区中关村大街5号"/></td>
+                   </tr>
+                   <tr><!--10-->
+                       <td class="col_80">产品价格:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="20元"/></td>
+                       <td class="col_80">邮 编:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="100010"/></td>
+                   </tr>
+                   <tr><!--11-->
+                       <td class="col_80">产品单位:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="科技公司"/></td>
+                       <td class="col_80">手 机:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="18808881888"/></td>
+                   </tr>
+                   <tr><!--12-->
+                        <td class="col_80">币 种:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="人民币"/></td>
+                       <td class="col_80">E-mail:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="54645654@126.com"/></td>
+                   </tr>
+                   
+                   <tr><!--14-->
+                        <td class="col_80">金 额:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="100元"/></td>
+                       <td class="col_80">Q Q:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="81234567"/></td>
+                   </tr>
+                  
+                   <tr><!--16-->
+                        <td class="col_80">创建时间:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="2013-7-5"/></td>
+                       <td class="col_80">照 片:</td>
+                       <td class="col_300"><input type="text" readonly  class=""/></td>
+                   </tr>
+                   <tr><!--17-->
+                        <td class="col_80">照片版页:</td>
+                       <td class="col_300"><input type="text" readonly  class=""/></td>
+                       <td class="col_80">状 态:</td>
+                       <td class="col_300"><input type="text" readonly  class=""value="核审中"/></td>
+                   </tr>
+                   
+                   <tr><!--13-->
+                        <td class="col_80">院校代码:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">学历:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="本科"/></td>
+                   </tr>
+                   <tr><!--13-->
+                        <td class="col_80">院系代码:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="987654"/></td>
+                       <td class="col_80">专 业:</td>
+                       <td class="col_300"><input type="text" readonly  class="" value="计算机"/></td>
+                   </tr>   
+                </table>
+                </div>
+                <!--表格end-->
+                
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<!--中心 end-->
+
+<!--底部信息 begin-->
+<include file="./App_Shares/Tpl/Index/footer.html"/>
+<!--底部信息 end-->
+
+</div>
+
+</body>
+</html>

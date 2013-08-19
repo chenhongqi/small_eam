@@ -1,0 +1,295 @@
+body,html {
+    text-align:center;
+    padding:0px;
+    margin:0px;
+    font-family:'微软雅黑',Arial;
+    font-size:12px;
+    background-color:#1D2855;
+}
+a {    text-decoration: none;    color:inherit;}
+ul,li{list-style:none;}
+.left{ float:left;}
+.right{ float:right;}
+
+#wrpper{
+    text-align:left;;
+    padding:45px 45px 0 45px;
+    margin:0 auto;
+    background-image:url(../images/background-image.png);
+	background-repeat:no-repeat;
+    width:910px;
+	height:933px;
+	overflow:hidden;
+}
+
+#header{width:100%; height:210px; }
+
+#main{width:100%;  position:relative; margin-bottom:120px; overflow:hidden;}
+
+#block{             /*文字*/
+    float:left;
+    margin-top:210px;
+    width:490px;
+    height:100px;
+}
+
+#interface{        /*登录DIV父级*/
+	text-align: center;
+	padding:0px;
+	float:right;
+	position:relative;
+	background-image:url(../images/background.png);/*:url(images/register-background.png);*/
+	width:307px;
+	height:346px;
+	}
+
+#interface ul{ 
+    padding:0px 40px;	margin:0px;
+    width:227px;	overflow:hidden;}
+
+#menu{    padding:0px; margin-bottom:20px;     width:100%;    height:115px; }
+
+#menu ul{	
+	width:227.5px;
+    float:left;
+    font-size:14px;
+    font-family:'微软雅黑',Arial;    
+    text-align:center;
+	padding:0;
+	margin:0;
+}
+#menu ul li{height:23px; border:0}
+#menu ul li a{    color:#FFF;}
+#menu a:hover,a:visited,a:active {font-family:"黑体"; color:#FFF; text-decoration:none;}
+
+#footer a {color:#FFF;}
+
+.prompt{ text-align:left; font-size:10px; color:red; height:15px;  display:block;}
+.prompt-one{ position:relative; width:100%; text-align:left; font-size:10px; color:red; height:15px;  display:block;}
+
+.block1{       /*帐号*/
+    height:45px;
+	padding:0;
+
+	margin-top:20px; 
+	display:block;
+	background-image:url(../images/bg_accounts.png);
+	background-repeat:no-repeat;	
+}
+.border1{border:1px solid #060;}
+.block1_color{   /*帐号背景换图*/
+    height:45px;
+	margin-top:30px; 
+	display:block;
+	background-image:url(../images/bg_accountscolor.png);
+	background-repeat:no-repeat;
+}
+
+.block2{   /*密码IV*/
+    height:45px;
+    margin:0px;
+    padding:0px;
+	
+    display:block;
+	background-image:url(../images/bg_password.png);
+	background-repeat:no-repeat;
+}
+.block2_color{   /*密码IV*/
+    height:45px;
+    margin:0px;
+    padding:0px;
+	
+    display:block;
+	background-image:url(../images/bg_passwordcolor.png);
+	background-repeat:no-repeat;
+}
+.block3{   /*邮箱IV*/
+    height:45px;
+    margin:0px;
+    padding:0px;
+	
+    display:block;
+	background-image:url(../images/bg_email.png);
+	background-repeat:no-repeat;
+}
+.block3_color{   /*邮箱IV*/
+    height:45px;
+    margin:0px;
+    padding:0px;
+	
+    display:block;
+	background-image:url(../images/bg_emailcolor.png);
+	background-repeat:no-repeat;
+}
+.block4{   /*验证IV*/
+    height:45px;
+    text-align:left;
+    margin:0px;    
+    font-size:12px;
+	margin-bottom:5px;
+}
+.block5{   /*协议*/
+    height:20px;
+    text-align:left;
+
+    font-size:12px;
+    color:#A2A2A2;
+	margin-bottom:5px;
+}
+.block6{   /*按钮*/
+    height:30px;
+    margin:0px;
+    color:#A2A2A2;
+}
+.ico{            /*帐号小图标*/
+    width:307px;
+    height:30px;
+    margin:0px;
+    padding:0px;
+    vertical-align:middle;
+}
+.icoimg{         /*图标DIV*/
+    float:left;
+    position:relative;
+    padding:0px;
+    vertical-align:middle;
+    border:1px solid #CCC;
+}
+.icoinput{            /*帐号文本框DIV*/
+    margin:0px;
+	padding:0;
+	position:relative;}
+
+.accounts{           /*帐号文本框*/
+   width:180px;
+    height:27px;
+	
+	color: rgb(68, 68, 68);
+	
+	
+	border: medium none;
+    background: none repeat scroll 0% 0% transparent;
+    padding: 2px 0px 2px 40px;
+}
+.accounts-label{           /*帐号提示框*/
+    position:absolute;
+	width:220px;
+	height:13px;
+	line-height:13px;
+	padding:0;
+	text-align: left;	
+	left:0;
+	bottom:32px;
+	background:rgba(245,245,236,1);   
+	color: #09F;
+	opacity:0;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.icoinput input:hover+ .accounts-label{
+	opacity:1;
+	bottom:32px;	
+}
+.password{               /*密码文字DIV */
+    position:relative;
+    text-align:left;
+    padding:0px;
+    font-size:16px;
+    color:#A2A2A2;
+    float:left;
+}
+.block5_ul{ margin:0; padding:0;}
+#treaty{   /*协议复选框DIV*/
+   padding:0px; margin:0; line-height:15px;}
+
+
+
+
+
+.treaty  a:hover,a:visited,a:active { color:#2656D1; text-decoration:none;  }
+.recaption a:hover,a:visited,a:active { color:#2656D1; text-decoration:none;  }
+
+
+.m{   /*验证码文本框DIV*/
+    height:26px;
+    width:85px;
+    float:left;
+    margin-right:5px;
+}
+
+.mtext{ font-size:12px; margin-right:5px;}
+.mtext a:hover,a:visited,a:active {color:#2656D1;}
+.mimg{               /*验证码图片 */
+    width:60px;
+    height:30px; 
+    margin-left:5px;
+}
+
+
+
+
+.button{   /*注册按钮*/
+    width:85px;
+    height:30px;
+    font-size:15px;
+    color:#999;
+    font-weight:bold;
+}
+.denglu{   /*登录DIV*/
+   height:30px;
+    font-size:16px;
+    color:#999;
+    line-height:30px;
+}
+.denglu a{   /*登录文字*/
+    padding:0px;
+    color:#2656D1;
+}
+
+.zhuce{
+	height:30px;
+	line-height:30px;	
+    width:70px;
+	font-size:15px;
+    float:left;
+    margin-right:13px;   
+}
+.zhuce a{
+	color:#FFF;
+}
+.a_photodust{	
+	background-image:url(../images/buttonbackground-hui.png);
+	background-repeat:no-repeat;
+	display:block;	    
+}
+.a_photoblue{
+	background-image:url(../images/buttonbackground.png);
+	background-repeat:no-repeat;
+	display:block;	    
+}
+
+.zhuce button{
+    /*color:#FFF;*/
+    /*background-image:url(../images/buttonbackground.png);*/
+    background-repeat:no-repeat;
+    display:block;
+    width:70px;
+    border:1px;
+}
+
+.hint{    color: red;}
+
+/*通用footer*/
+.footer {width:100%; margin:0 auto; height:100px; position:relative; text-align:center; color:#FFF }
+
+
+
+.footpic{width: 100%; }
+.footpic ul{width: 320px; margin: 0px auto; height: 50px; padding: 15px 0px 0px;}
+.footpic li{padding-right: 10px;float: left; ;}
+
+.footer_text{}

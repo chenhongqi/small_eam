@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Page-Enter" content="revealTrans(duration=3, transition=1)">
+    <meta http-equiv="Page-Exit" content="revealTrans(duration=3, transition=12)">
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="../Public/css/register-style.css"/>
+
+    <script language=JavaScript type="text/javascript" src="__ROOT__/Public/js/jquery-1.9.0.min.js"></script>
+
+
+    <script language="JavaScript">
+        function changeVerify() {
+            var timenow = new Date().getTime();
+            document.getElementById('verifyImg').src = "{:U('User/verify')}" +"&time=" +timenow;
+        }
+
+        function enablebutton(){
+            if(document.getElementById("protocol").checked)
+            {
+                jQuery('#buttonzhuce').removeClass('a_photodust');
+                jQuery('#buttonzhuce').addClass('a_photoblue');
+            }
+            else{
+                jQuery('#buttonzhuce').removeClass('a_photoblue');
+                jQuery('#buttonzhuce').addClass('a_photodust');
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+<div id="wrpper">
+
+    <!--头部div-->
+    <div id="header"><a href="index.html"><img src="../Public/images/logo.png"/></a>
+    </div>
+
+    <!--主要部分 div-->
+    <div id="main">
+        <!--文字部分 div-->
+        <div id="block">
+            <b style="font-size:36px">欢迎来到CPS</b><br/>
+            <b style="font-size:48px">现在注册立享更多权限</b>
+        </div>
+
+        <!--注册div-->
+        <form action="{:U('doregister')}" method="post">
+            <div id="interface">
+                <ul>
+                    <li class="block1 "><!--帐号框-->
+                        
+                        <div class="icoinput">
+                            
+                            <input id='account' type="text" class="accounts"   name="account"  value="{$username}"/>
+                            <label class="accounts-label">用户名</label> 
+                        </div>
+                        <div id='usernamemsg' class="prompt">{$usernamemsg}</div>
+                    </li>
+
+                    <li class="block2 ">   <!--密码框-->
+                        
+                        <div class="icoinput">
+                           
+                            <input id='password1' type="password" class="accounts"
+                                   name="password1"
+                                   onblur="if(this.value=='') {value='chavroka';}"
+                                   onfocus="if(this.value=='chavroka') {value='';}"
+                                   value="{$password1}"/>
+                                   <label class="accounts-label">请设置密码</label> 
+                        </div>
+                       <div id='password1msg' class="prompt">{$password1msg}</div>
+                    </li>
+
+                    <li class="block2 "><!--确认密码框-->
+                       
+                        <div class="icoinput">
+                           
+                            <input id='password2' type="password" class="accounts"
+                                   name="password2"
+                                   onblur="if(this.value=='') {value='chavroka';}"
+                                   onfocus="if(this.value=='chavroka') {value='';}"
+                                   value="{$password2}"/>
+                            <label class="accounts-label">请确认密码</label> 
+                        </div>
+                         <div id='password2msg' class="prompt">{$password2msg}</div>
+                    </li>
+
+                    <li class="block3 ">  <!--邮件框-->
+                        
+                        <div class="icoinput">
+                            
+                            <input id='email' type="text" class="accounts" 
+                                   name="email" onblur="if(this.value==''){value='chavroka@gmail.com';}"
+                                   onfocus="if(this.value=='chavroka@gmail.com'){value='';}"
+                                   value="{$email}"/>
+                            <label class="accounts-label">请输入邮箱</label> 
+                        </div>
+                         <div id='emailmsg' class="prompt">{$emailmsg}</div>
+                    </li>
+
+                    <li class="block4 "><!--验证码-->                       
+                        <div class="icoinput">                            
+                            <input id='verifycode' class="m left" name="verifyCode" type="text" value="{$verifyCode}"/>                          
+                        </div>
+                        <div class="mimg left">
+                            <img id="verifyImg" src="{:U('User/verify')}" onClick="changeVerify()" title="点击切换"/>
+                        </div>
+                        <div class="mtext right"><a href="javascript:changeVerify();">看不清？<br />换一张</a></div>
+                       
+                        <div id='verifycodemsg' class="prompt-one left">{$verifymsg}</div>
+                    </li>
+
+                    <li class="block5 ">  <!--协议框-->
+                         <span class="treaty">
+                         <table border="0" cellspacing="0">
+                           <tr>
+                             <td>
+                            <input id='protocol' type="checkbox" class="bnt_check"  name="checkbox"
+                                   onchange="enablebutton(this);"/>
+                           
+
+                            </td>
+                            <td>我已阅读并接受<a href="../footer/copyright.html">《中国图片社条款》</a></td>
+                         </table>
+                             </span>
+                    </li>
+
+                    <li class="block6 "> <!--按钮-->
+                       
+                        <div class="zhuce">
+                           <a id="buttonzhuce" href="#" class="a_photodust"  ><span>免费注册</span></a>                       
+                           <!--<a id="buttonzhuce" href="#" class="a_photoblue" ><span>免费注册</span></a>-->   
+                        </div>
+                        <div class="denglu">        <!--转至登录界面-->
+                           已注册请 <a href="{:U('User/login')}">登录</a>
+                        </div>
+                   </li>
+                </ul>
+            </div>
+        </form>
+        <!--登录   end-->
+    </div>
+
+    <!--文字列表div-->
+    <div id="menu">
+        <ul>
+            <li><a href="../qqzx/index.html">全球资讯</a></li>
+            <li><a href="../zttk/index.html">专题图库</a></li>
+            <li><a href="../xrsy/index.html">新锐摄影</a></li>
+            <li><a href="picmall.html">图片交易</a></li>
+
+        </ul>
+        <ul>
+            <li><a href="../syskj/index.html">摄影师空间</a></li>
+            <li><a href="../yssc/index.html">艺术收藏</a></li>
+            <li><a href="../sylx/index.html">摄影旅行</a></li>
+        </ul>
+        <ul>
+            <li><a href="../dzzz/index.html">电子杂志</a></li>
+            <li><a href="../sgaf/index.html">手工暗房</a></li>
+            <li><a href="../txcj/index.html">大学生图像采集</a></li>
+        </ul>
+        <ul>
+            <li><a href="../czjd/index.html">创作基地</a></li>
+            <li><a href="../tshc/index.html">图书画册</a></li>
+            <li><a href="../zyfw/zyfw.html">中国图片社专业服务</a></li>
+        </ul>
+    </div>
+    <!--文字列表  end-->
+
+
+    <!--底部信息 begin-->
+    <div class="footer">
+        <div class="footpic">
+            <ul>
+                <li><a href="http://www.news.cn" title="新华通讯社" target="_blank"><img
+                        src="../Public/images/xhlogo.png"
+                        class="pngFix"/></a></li>
+                <li><a href="http://www.chnphoto.com.cn" title="新华通讯社" target="_blank"><img
+                        src="../Public/images/cpslogo.png" class="pngFix"/></a></li>
+            </ul>
+        </div>
+
+        <div class="footer_text">
+            <a href="../footer/about.html">关于我们</a>
+            |
+            <a href="../footer/copyright.html">版权声明</a>
+            |
+            <a href="../footer/connect.html">联系我们</a>
+            <br>版权所有©中国图片社 备案序号：<a href="footer/connect.html">京12144000号</a>&nbsp;&nbsp;&nbsp;法律声明&nbsp;&nbsp;copyright@2012
+            China Photo Service。all</br>
+        </div>
+    </div>
+    <!--底部信息 end-->
+</div>
+<script language=JavaScript type="text/javascript" src="../Public/js/cps.register.js"></script>
+
+</body>
+</html>

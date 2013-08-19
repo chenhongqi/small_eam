@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>个人中心</title>
+    <link href="../Public/css/personal-style.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <link rel="stylesheet" href="../Public/css/jquery-ui.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script language=JavaScript type=text/javascript src="__PUBLIC__/js/jquery.form.js"></script>
+    <script language=JavaScript type=text/javascript src="__PUBLIC__/js/functions.js"></script>
+
+    <script>
+        jQuery(function () {
+            jQuery("#tabs").tabs();
+        });
+
+        function changeVerify() {
+            var timenow = new Date().getTime();
+            document.getElementById('verifyImg').src = "{:U('Center/verify')}" + "&time=" + timenow;
+        }
+    </script>
+</head>
+
+
+<body>
+
+
+<div id="wrapper">
+<!--头部 begin-->
+<include file="./App_Shares/Tpl/Index/header.html"/>
+<!--头部 end-->
+
+<!--中心-->
+<div id="main">
+<!--中心部分-->
+<div id="center">
+    <div class="select">                 <!--左选择框-->
+        <div class="select-size">           <!--我的资料-->
+            <a href="#"><img src="../Public/images/select1-1.jpg"/></a>
+        </div>
+        <div class="select-size">           <!--我的订单-->
+            <a href="{:U('Center/orders')}" class="select6"></a>
+        </div>
+        <div class="select-size">           <!--安全中心-->
+            <a href="#" class="select2"></a>
+        </div>
+        <div class="select-size">            <!--余额管理-->
+            <a href="#" class="select3"></a>
+        </div>
+        <div class="select-size">            <!--我要推广-->
+            <a href="#" class="select4"></a>
+        </div>
+        <div class="select-size">            <!--帮助中心-->
+            <a href="#" class="select5"></a>
+        </div>
+    </div>
+    <div class="information">
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">个人信息</a></li>
+                <li><a href="#tabs-2">修改密码</a></li>
+            </ul>
+            <div id="tabs-1">
+                <form>
+                    <div class="block2">
+                       <div class="block2_left left">
+                        <table border="0" cellspacing="0">
+                        <tr>
+                          <td  class="tol_left" >登录名：</td>
+                          <td  class="tol_right">{$user.uname}</td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >真实姓名：</td>
+                          <td  class="tol_right"><input type="text" name="realname" class="textbox" value="{$user.utname}"/></td>
+                        </tr>
+                         
+                         <tr>
+                          <td  class="tol_left" >性 别：</td>
+                          <td  class="tol_right"> 
+                                 <select name="gender">
+                                    <option value="男"
+                                    <eq name="user.usex" value="男">selected=true</eq>
+                                    >男
+                                    </option>
+                                    <option value="女"
+                                    <eq name="user.usex" value="女">selected=true</eq>
+                                    >女
+                                    </option>
+                                </select>
+                          </td>
+                        </tr>                        
+                        <tr>
+                          <td  class="tol_left" >学 历：</td>
+                          <td  class="tol_right">
+                               <select name="degree">
+                                    <option value="普通本科"
+                                    <eq name="user.degree" value="普通本科">selected=true</eq>
+                                    >普通本科</option>
+                                    <option value="博士"
+                                    <eq name="user.degree" value="博士">selected=true</eq>
+                                    >博士</option>
+                                    <option value="硕士"
+                                    <eq name="user.degree" value="硕士">selected=true</eq>
+                                    >硕士</option>
+                                    <option value="普通专科"
+                                    <eq name="user.degree" value="普通专科">selected=true</eq>
+                                    >普通专科</option>
+                                    <option value="成人本科"
+                                    <eq name="user.degree" value="成人本科">selected=true</eq>
+                                    >成人本科</option>
+                                    <option value="成人专科"
+                                    <eq name="user.degree" value="成人专科">selected=true</eq>
+                                    >成人专科</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                         <tr>
+                          <td  class="tol_left" >出生日期：</td>
+                          <td  class="tol_right"><input type="text" name="birthday" class="textbox" value="{$user.ubirthday}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >身份证号：</td>
+                          <td  class="tol_right"><input type="text" name="idnumber" class="textbox" value="{$user.uIDno}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >手机号：</td>
+                          <td  class="tol_right"><input type="text" name="tel1" class="textbox" value="{$user.tel1}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >Q Q号：</td>
+                          <td  class="tol_right"><input type="text" name="qq" class="textbox" value="{$user.uqq}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >邮 箱：</td>
+                          <td  class="tol_right"><input type="text" name="email" class="textbox" value="{$user.uemail}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >联系地址：</td>
+                          <td  class="tol_right"><input type="text" name="address" class="textbox" value="{$user.address}"/></td>
+                        </tr>
+                         <tr>
+                          <td  class="tol_left" >职 业：</td>
+                          <td  class="tol_right"><input type="text" name="job" class="textbox" value="{$user.job}"/></td>
+                        </tr>
+                        <tr>
+                          <td  class="tol_left" >爱 好：</td>
+                          <td  class="tol_right"><input type="text" name="hobby" class="textbox" value="{$user.hobby}"/></td>
+                        </tr>
+                        <tr>
+                          <td  class="tol_left" >简 介：</td>
+                          <td  class="tol_right"><input type="text" name="about" class="textbox" value="{$user.about}"/></td>
+                        </tr>
+                        <tr>
+                          <td  class="tol_left" >
+                              <!--<label class="err summary">{$summarymsg}</label>-->
+                          </td>
+                          <td  class="tol_right"><input type="button" value="完成修改" name="btnModify" class="btnModify"/></td>
+                        </tr>
+
+                        
+                     </table>
+                     </div>
+                     
+                     <div class="block2_right right"><!--照片-->
+                       <ul> <!--照片-->
+                            <li class="photo">
+                                <img class="avatar" src="{$user.avatar}" alt="头像"
+                                     onError="this.src='../Public/images/head.jpg';"/>
+                            </li>
+                            <li>
+                                <input style="font-size:14px;"   type="file" value="上传照片" name="uploading"/>
+                            </li>
+                            <li>
+                                <img class="imgstatus" src="../Public/images/success.png"/>
+                            </li>
+                            <li>
+                                 <label class="err summary">{$summarymsg}</label>
+                            </li>
+                        </ul>
+                     </div>  
+                      </div>            
+                </form>
+           
+            </div>
+            
+            <div id="tabs-2">
+                <form>
+                <div class="block2">
+                    <table>
+                        <tr>
+                            <td width="160">新密码:</td>
+                            <td><input type="password" name="password1" value="{$password1}"></td>
+                            <td class="error">{$password1msg}</td>
+                        </tr>
+                        <tr>
+                            <td>再次输入新密码:</td>
+                            <td><input type="password" name="password2" value="{$password2}"></td>
+                            <td class="error">{$password2msg}</td>
+                        </tr>
+                        <tr>
+                            <td>{:L('verify')}:</td>
+                            <td><input name="verifyCode" id="verifyCode" value="{$verifyCode}"/>
+                                <img id="verifyImg" src="{:U('Center/verify')}" onClick="changeVerify();"
+                                     title="点击切换"/>
+                                <a title="换一张" href="javascript:changeVerify()">换一张？</a>
+                            </td>
+                            <td class="error">{$verifymsg}</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><label class="err summary">{$summarymsg}</label></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="提交新密码" name="btnChgPwd" id="btnChgPwd"/>
+                                <input type="reset" value="{:L('cancel')}">
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--中心 end-->
+
+<!--底部信息 begin-->
+<include file="./App_Shares/Tpl/Index/footer.html"/>
+<!--底部信息 end-->
+
+</div>
+
+<script language=JavaScript type=text/javascript src="../Public/js/cps.personal.info.js"></script>
+<script language=JavaScript type=text/javascript src="../Public/js/cps.personal.reset.js"></script>
+
+</body>
+</html>

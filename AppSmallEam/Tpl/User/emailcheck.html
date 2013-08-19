@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>注册成功</title>
+
+    <link href="__PUBLIC__/css/public1.css" rel="stylesheet" type="text/css" media="screen"/>
+     <link href="../Public/css/emailcheck.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+<body>
+<div id="wrapper">
+    <!--头部 begin-->
+    <include file="./App_Shares/Tpl/Index/header.html"/>
+    <!--头部 end-->
+
+    <div id="main">
+        <!--内文 begin-->
+        <div id="content">
+        
+           <div class="content_top" >
+              <div class="ok left"><img src="../Public/images/succeed.png" /></div>   
+              <div class="succeed left">注册成功！</div>
+           </div>
+           
+           <div class="content_bottom">
+              <ul>
+                 <li class="col1">邮箱认证！</li>
+                 <li class="col2">&nbsp;&nbsp;&nbsp;&nbsp;{$username},您好！认证邮件已经发送到您的邮箱<b>{$email}</b>,请登陆邮箱完成注册！</li>
+                 <li class="col3">如果您在10分钟之内还没有收到邮件,请点击此处<a href="{:U('resendemail?resend=1')}">&lt;重新发送认证邮件&gt;</a></li>                 
+              </ul>
+           </div>  
+        
+        </div>
+        <!--内文 end-->
+    </div>
+
+    <!--底部信息 begin-->
+    <include file="./App_Shares/Tpl/Index/footer.html"/>
+    <!--底部信息 end-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body,div,ol,ul,li,p,span,img,a,em,form,input,button,select,iframe,h1,h2,h3,h4,h5,h6{
+
+	margin:0;
+	
+	padding:0;
+	
+	border:none;}
+	
+body{
+	background-color:#000000;
+	
+	width:1000px;
+	
+	margin:0px auto;
+	
+	font-family:"Microsoft YaHei",'微软雅黑';}
+	
+ul,li{
+
+	list-style:none;}
+	
+
+a{
+	text-decoration:none;}	
+	
+
+		
+em{
+	
+	font-style:normal;
+	
+	font-weight:bold;
+	
+	font-size:12px;
+	
+	font-family:Arial, Helvetica, sans-serif;}
+	
+.hide{
+	
+	display:none;}
+	
+.clear{
+
+	clear:both;
+	
+	height:0px;
+	
+	line-height:0px;
+	
+	padding:0px;
+	
+	margin:0px;	
+	}
+	
+.left{
+
+	float:left}
+	
+.right{
+	
+	float:right;}
+
+.center{ text-align:center;}	
+
+/*********    图片文字垂直水平居中分布 浏览器兼容  begin ********/
+.pic_area{ display:table;  _position:relative; overflow:hidden; text-align:center;}
+.pic_area .s_pic{ vertical-align:middle;  display:table-cell;_position:absolute;_top:50%; _left:50% }    
+.pic_area .s_pic .img_content{ _position:relative; _top:-50%; _left:-50%}
+
+.txt_area{display:table; _position:relative; overflow:hidden; }
+.txt_area .s_txt{ vertical-align:middle;  display:table-cell;_position:absolute;_top:50%; }    
+.txt_area .s_txt .txt_content{ _position:relative; _top:-50%;}
+/*********   图片文字垂直水平居中分布  浏览器兼容  end *******/
+
+
+/*********  自定义不同的字号  begin ********/
+.fsize72{font-size:72px;}
+.fsize48{font-size:48px;} 
+.fsize30{font-size:30px;} 
+.fsize32{font-size:32px;}
+.fsize20{font-size:20px;}
+
+/*********  自定义不同的字号  end ********/
+
+/*********  自定义间距  begin ********/
+.top_space10{ margin-top:10px;}
+.left_space10{ margin-left:10px;}
+.bottom_space20{ margin-bottom:20px;}
+/*********  自定义间距  end ********/
+
+/*********  自定义行高  begin ********/
+.lineheight30{ line-height:30px;}
+/*********  自定义行高  end ********/
+
+
+
+/*******************公共布局样式************************/
+#wrapper{
+}
+
+#main{
+}
+
+
+/*******************  头部样式   begin ***************/
+#header { width:990px; height:75px;  padding:15px 0px 10px 10px; }
+#header .logo{ width:280px; height:75px; float:left; background:url(../images/logo.png) no-repeat;}
+/*******************  头部样式   end ***************/
+
+/*******************  底部样式   begin ***************/
+#footer { width:1000px;height:120px; text-align:center;}
+#footer .footpic{ width:320px; margin:0px auto; height:50px; padding:15px 0px 0px 0px;}
+#footer .footpic li{ padding-right:10px; float:left; }
+#footer .footurl a:link{color:#ffffff; font-size:12px}
+#footer .footurl a:hover{color:#ff0000; font-size:12px}	
+#footer .footurl a:visited{color:#ffffff; font-size:12px}
+#footer .footurl p {color:#FFF}
+#footer .copyright{ color:#fff; font-size:12px; text-align:center; height:40px; width:1000px; display:block; line-height:40px;}
+#footer .copyright p{ margin:10px 0px 0px 0px;font-size:12px;}
+#footer .copyright p.forbid{ margin:-20px 0px; }
+/*******************  底部样式   end ***************/

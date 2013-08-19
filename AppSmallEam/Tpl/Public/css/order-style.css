@@ -1,0 +1,185 @@
+html, body, div, ol, ul, li, p, span, img, a, em, form, button, iframe, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+    border: medium none;
+}
+body, html {
+    text-align:left;
+    font-family: '微软雅黑',Arial;
+    font-size: 18px;
+	background-color:#1D2855;
+}
+ul,li{list-style:none;}
+
+
+a{text-decoration:none;}	
+
+.left{float:left}
+	
+.right{float:right;}
+
+.center{text-align:center;}
+
+
+#wrapper {
+    position: relative;
+    width: 1000px;
+    margin: 0px auto;
+    background-color:#1D2855;
+}
+.bgcolor{ background-color:#1D2855;}
+
+/*******************  头部样式   begin ***************/
+#header { width:990px; height:75px;  padding:15px 0px 10px 10px; }
+#header .logo{ width:280px; height:75px; float:left; background:url(../images/logo.png) no-repeat;}
+/*******************  头部样式   end ***************/
+
+/*******************  内文样式   begin ***************/
+#center{
+	/*widows:1000px;	*/
+	background-color:#DEDEDE;
+	padding:30px 20px;
+	overflow:hidden;
+	
+	position:relative;
+}
+.select{                                /*基于center的左侧导航DIV*/
+	width:150px;
+	height:auto;
+	float:left;
+}
+.select-size .select2 .select3 .select4 .select5 .select6{     /*基于select的子DIV控制图片大小*/
+	width:150px;
+	height:50px;
+}
+.select6{	
+    width:150px;
+	height:50px;
+	background-image:url(../images/select6.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select6:hover{
+	background-image:url(../images/select6-1.jpg);
+}  
+.select1{
+	width:150px;
+	height:50px;	
+	background-image:url(../images/select1.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select1:hover{
+	background-image:url(../images/select1-1.jpg);
+}  
+.select2{
+	width:150px;
+	height:50px;	
+	background-image:url(../images/select2.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select2:hover{
+	background-image:url(../images/select2-1.jpg);
+}  
+.select3{
+	width:150px;
+	height:50px;	
+	background-image:url(../images/select3.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select3:hover{
+	background-image:url(../images/select3-1.jpg);
+}  
+.select4{
+	width:150px;
+	height:50px;
+	background-image:url(../images/select4.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select4:hover{
+	background-image:url(../images/select4-1.jpg);
+}
+.select5{
+	width:150px;
+	height:50px;	
+	background-image:url(../images/select5.jpg);
+	background-repeat: no-repeat;
+	display:block;	
+}
+.select5:hover{
+	background-image:url(../images/select5-1.jpg);
+}  
+
+.information{                      /*个人信息总的DIV*/
+	width:780px;
+	float:left;
+	background-color:#FFF;
+	padding:15px;
+	-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);/*firefox*/
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);/*safari或chrome*/
+	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);/*opera或ie9*/
+}
+
+.title{
+    background-image: url(../images/all-order.png);
+    text-align: right;
+
+}
+
+.title,.menu{                  
+	width:780px;
+	height:42px;
+}
+.block{                  /*信息填写大DIV*/
+	margin:10px 0px;
+	width:780px;
+	overflow:hidden;	
+	background-color:#F5F5F3;
+	font-size:15px;
+	border-radius:10px 10px 10px 10px;
+}
+.block table{width:780px; position:relative;}	
+.block table tr{ height:42px; }
+.block table tr td,th{text-align:center; vertical-align:middle;}
+.block table tr th{border-bottom:1px solid #999;}
+.col_1{width:5%; }
+.col_2,.col_3,.col_4,.col_5,.col_6,.col_7,.col_8{width:12.5%; }
+#first_one{font-size:15px; font-weight:bold; border-bottom:1px solid #999;}
+
+.block ul{	width:780px; position:relative; font-size:15px;}		
+.block li{text-align:center; vertical-align:middle; width:86px; height:42px; line-height:42px; float:left;}
+li a:hover{	text-decoration:underline; color:#00F;}
+#page{              
+     text-align:right; 	  
+	  padding-right:20px;
+	  text-align:right;
+	  border-top:1px solid #999; 
+	  font-size:16px;}
+	  
+#page span{ color:#CCC;}
+#page .a1{ color:rgb(118,158,47)}
+#page a{ color:#CCC;}
+#page a:hover{color:rgb(118,158,47)}
+
+/*******************  内文样式   end ***************/
+
+
+
+
+
+
+/*******************  底部样式   begin ***************/
+#footer { width:1000px;height:160px; text-align:center;}
+#footer .footpic{ width:320px; margin:0px auto; height:50px; padding:15px 0px 0px 0px;}
+#footer .footpic li{ padding-right:10px; float:left; }
+#footer .footurl a:link{color:#ffffff; font-size:12px}
+#footer .footurl a:hover{color:#ff0000; font-size:12px}	
+#footer .footurl a:visited{color:#ffffff; font-size:12px}
+#footer .footurl p {color:#FFF}
+#footer .copyright{ color:#fff; font-size:12px; text-align:center; height:40px; width:1000px; display:block; line-height:40px;}
+#footer .copyright p{ margin:10px 0px 0px 0px;font-size:12px;}
+#footer .copyright p.forbid{ margin:-20px 0px; }
+/*******************  底部样式   end ***************/

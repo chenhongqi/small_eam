@@ -1,0 +1,19 @@
+a:link{color:#ffffff; text-decoration:none}
+a:hover{color:#ffffff; text-decoration:none}	
+a:visited{color:#ffffff; text-decoration:none}
+
+
+body {
+    background-color: #182451;
+    background-image: url(../images/bg2.jpg);
+    background-repeat: repeat-x;
+    width: 1020px;
+}
+
+#main{
+    /*widows:1000px;*/
+    background-color:#DEDEDE;
+    padding:30px 20px;
+    overflow:hidden;
+    position:relative;
+}

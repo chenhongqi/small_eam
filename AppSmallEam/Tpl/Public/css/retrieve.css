@@ -1,0 +1,101 @@
+
+body,html {
+    text-align:center;
+    padding:0px;
+    margin:0px auto;
+    font-family:'微软雅黑',Arial;
+    font-size:14px;
+    background-color:#1D2855;
+}
+.left{ float:left}
+.right{ float:right}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+#wrapper{
+    margin:0 auto;
+    width:1000px;
+	overflow:hidden;
+}
+
+#main{
+    /*width:100%; */
+    position:relative; padding:30px 0;  overflow:hidden; background-color:#b5b5b6;}
+
+#content{ 
+    width:440px;  height:275px;
+	border-radius:10px;
+    overflow:hidden;
+    border:1px solid #999;
+	background-color:#FFF;
+	margin:0 auto; 
+	
+
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
+-moz-box-shadow:2px 2px 3px 0px #909090;/*firefox*/
+-webkit-box-shadow:0px 0px 1px 0px #909090;/*safari或chrome*/
+box-shadow:0px 1px 10px 0px #909090;/*opera或ie9*/
+}
+#infolist{ width:100%; height:235px;}
+.infolist_text{ padding:15px 0 5px;}
+
+.hint{ color:red; margin-bottom:-10px;}
+#title{
+	width:100%; height:50px;
+	progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#549234,endColorStr=#3c6725); /*IE*/ 
+    background:-moz-linear-gradient(top,#549234,#3c6725);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#549234), to(#3c6725));/*谷歌*/
+	font-size:18px;
+	font-weight:600;
+	color:#FFF;
+	line-height:45px;
+	padding-left:20px;
+	text-align:left;	
+ }
+
+
+table{ width:100%;  height:auto; overflow:hidden;}
+table tr{height:40px; }
+table tr td{ vertical-align:middle;}
+
+.col_left{ text-align:right; font-size:16px; color:#333; width:125px;}
+.col_right{ text-align:left; padding-left:10px; }
+.col_right3r{ text-align:left; padding-left:10px; width:100px;}
+.col_right5r{ text-align:left; padding-left:10px; width:50px;}
+.col_right7r{ text-align:left; padding-left:10px;}
+
+
+.inputcommon{ width:220px; height:25px;
+    border: 1px solid #888888;
+    padding:1px 5px; }
+
+
+.inputVerifyCode{ width:90px; height:25px;
+    border: 1px solid #888888;
+    padding:1px 5px; }
+
+
+
+#but{width:100%; text-align:center; margin-top:20px;}
+#butretrieve {
+	width:115px;  height:30px;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+	border-radius:2px;
+	font-size:18px;
+	margin:0 auto;
+	
+	
+	progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#79a625,endColorStr=#569334); /*IE*/ 
+    background:-moz-linear-gradient(top,#79a625,#569334);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#79a625), to(#569334));/*谷歌*/
+ }
+#butretrieve input {
+	width:115px;  height:30px;
+	border: medium none;
+    background: none repeat scroll 0% 0% transparent;
+	color:#FFF;
+	font-size:15px;
+	cursor:pointer;
+}
+

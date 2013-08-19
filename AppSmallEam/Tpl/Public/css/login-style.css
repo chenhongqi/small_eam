@@ -1,0 +1,266 @@
+body,html {
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	font-family:'微软雅黑',Arial;
+	font-size:12px;
+	background-color:#1D2855;
+}
+#content{
+	text-align:center;
+	padding:0px;
+    margin:0 auto;
+	background-image:url(../images/background-image.png);
+	width:1000px;
+	height:978px;
+}
+#blockregister{        /*登录DIV父级*/
+	text-align:center;
+	padding:0px;
+	float:left;
+	position:absolute;
+	margin-left:648px;
+	margin-top:252px;
+	background-image:url(../images/background.png) ;/*:url(images/background.png);*/
+	width:307px;
+	height:346px;
+}
+#block{             /*主体文字*/
+	text-align:left;
+	padding:0px;
+	float:left;
+	margin-left:44px;
+	margin-top:462px;
+	width:490px;
+	height:100px;
+}
+#blocktext{   /*导航文字*/
+	text-align:left;
+	padding:0px;
+	position:absolute;
+	float:left;
+	margin-top:736px;
+	width:1000px;
+	height:115px;
+	color:#FFF;
+}
+#footer{                 /*底部*/
+	color:#FFF;
+	text-align:center;
+	padding:0px;
+	position:absolute;
+	float:left;
+	margin-top:925px;
+	width:1000px;
+	height:34px;
+}
+#logo{
+	position:absolute;
+	padding:0px;
+	float:left;
+	margin-left:24px;
+	margin-top:40px;
+	width:243px;
+	height:67px;
+}
+#null{           /*热点*/
+	position:absolute;
+	padding:0px;
+	float:left;
+	margin-left:357px;
+	margin-top:875px;
+	width:287px;
+	height:49px;
+}
+#null1{           /*热点*/
+	position:relative;
+	padding:0px;
+	float:left;
+	width:155px;
+	height:49px;
+}
+#null2{            /*热点*/
+	position:relative;
+	padding:0px;
+	float:right;
+	width:121px;
+	height:49px;
+}
+	
+#blocktext{
+	text-align:left;
+	padding:0px;
+	position:absolute;
+	float:left;
+	margin-top:736px;
+	width:1000px;
+	height:115px;
+	}
+#blocktext ul li{
+    font-size:14px;
+
+	font-family:'微软雅黑',Arial;
+	height:23px;
+	list-style:none;
+	text-align:center;
+}
+#blocktext ul li a{
+    color:#FFF;
+}
+#listing{    /*列表IV*/
+	width:200px;
+	float:left;
+	margin:0;
+}
+a {
+    text-decoration: none;
+	color:inherit;
+}
+#footer a {
+	color:#FFF;
+}
+.register1{       /*基于登录DIV的帐号1DIV*/
+	height:30px;
+	padding:0px;
+	margin-top:30px;
+	margin-bottom:15px;
+	margin-left:35px;
+}
+.register2{   /*基于登录DIV的子级密码DIV*/
+	height:30px;
+	margin:0px;
+	padding:0px;
+	margin-bottom:13px;
+	margin-left:35px;
+}
+.register3{   /*基于登录DIV的子级3DIV*/
+	height:15px;
+	text-align:left;
+	margin:0px;
+	padding-left:35px;
+	margin-bottom:15px;
+	font-size:12px;
+}
+.register4{   /*基于登录DIV的子级4DIV*/
+	height:30px;
+	text-align:center;
+	margin:0px;
+	padding-left:35px;
+	margin-bottom:15px;
+	font-size:16px;
+	font-weight:bold;
+	color:#A2A2A2;
+}
+.register5{   /*基于登录DIV的子级4DIV*/
+	height:30px;
+	margin:0px;
+	padding-left:35px;
+	color:#A2A2A2;
+}
+.ico{            /*帐号小图标*/
+	width:307px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+.icoimg{         /*图标DIV*/
+	float:left;
+	position:relative;
+	padding:0px;
+	vertical-align:middle;
+	border:1px solid #ABADB3;  
+}
+
+.icoinput{            /*帐号文本框DIV*/
+	margin:0px;
+	float:left;
+	
+}
+.accounts{           /*帐号文本框*/
+	width:195px;
+	height:28px;
+	margin:0px;
+	padding:0px;
+	color:#999;	
+}
+.controlbutton{       /*列表按钮 等红旗老师来实现*/
+	width:50px;
+	height:20px;
+	position:relative;
+	padding:0px;
+	background-color:#999;
+	border:1px solid  #666;
+	float:left;
+	margin: auto 12px auto 12px;
+}
+.password{               /*密码文字DIV */
+	position:relative;
+	text-align:center;
+		padding:0px;
+	font-size:16px;
+	font-weight:bold;
+	color:#A2A2A2;
+	float:left;
+}
+.m{   /*验证码文本框DIV*/
+	height:26px;
+	width:70px;
+	float:left;
+	margin-right:10px;
+}
+.mtext{               /*看不清文字 */
+    line-height:30px;
+	text-align:center;
+	padding:0px;
+	font-size:16px;
+	font-weight:bold;
+	color:#A2A2A2;
+	position:relative;
+	float:right;
+	margin-right:40px;
+}
+.mimg{               /*验证码图片 */
+    width:60px;
+    height:30px;
+    /*background-color:#999;*/
+	/*border:1px solid  #666;*/
+	float:left;
+	margin-left:5px;
+}
+.zhuce{   /*注册DIV*/
+	height:28px;
+	width:70px;
+	float:left;
+}
+.button{   /*注册按钮*/
+	width:85px;
+	height:30px;
+	font-size:15px;
+
+	font-weight:bold;
+	color:#999;
+}
+.denglu{   /*登录*/
+	height:30px;
+	font-size:16px;
+	color:#999;
+	line-height:30px;
+}
+.denglu a{   /*登录文字*/
+	padding:0px;
+	color:#2656D1;
+}
+.treaty{   /*协议复选框DIV*/
+	float:left;
+	padding:0px;
+} 
+.treaty1{   /*协议DIV*/
+	float:left;
+	padding:0px;
+	line-height:20px;
+} 
+.treaty1 a{   /*协议复选框DIV*/
+	padding:0px;
+	color:#2656D1;
+} 

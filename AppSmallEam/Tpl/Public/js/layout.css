@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,input,img {margin:0 auto; padding:0; font-weight:normal;} /*通用初始化*/
+
+img{ border:0; vertical-align:middle}
+
+/*通用footer*/
+.footer {width:1020px; margin:0 auto; height:45px;}
+.footer a:link,a:hover,a:visited,a:active {font-family:"宋体"; color:#FFF; text-decoration:none;}
+.footer ul {position:relative;}
+.footer li {position:absolute;}
+.footer .fllink {left:365px; top:0px; width:150px; height:45px; overflow:hidden;}
+.footer .frlink {left:515px; top:0px;  width:150px; height:45px; overflow:hidden;}
+.footer p {padding:0px; font-family:"宋体"; font-size:12px; text-align:center; color:#FFF; line-height:12px;}

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>个人中心</title>
+    <link media="screen" type="text/css" rel="stylesheet" href="../Public/css/order-detail-style.css"/>
+    <!---->
+</head>
+
+
+<body>
+<div id="wrapper">
+    <!--头部 begin-->
+    <include file="./App_Shares/Tpl/Index/header.html"/>
+    <!--头部 end-->
+
+    <!--中心-->
+    <div id="center">
+        <div class="select">                 <!--左选择框-->
+            <div class="select_size">           <!--我的资料-->
+                <a href="{:U('Center/personal')}" class="select1"></a>
+            </div>
+            <div class="select_size">           <!--我的订单-->
+                <a href="{:U('Center/orders')}"><img src="../Public/images/select6-1.jpg"/></a>
+            </div>
+            <div class="select_size">           <!--安全中心-->
+                <a href="#" class="select2"></a>
+            </div>
+            <div class="select_size">            <!--余额管理-->
+                <a href="#" class="select3"></a>
+            </div>
+            <div class="select_size">            <!--我要推广-->
+                <a href="#" class="select4"></a>
+            </div>
+            <div class="select_size">            <!--帮助中心-->
+                <a href="#" class="select5"></a>
+            </div>
+        </div>
+        <div class="information">
+            <div class="title"> <!--标题-->
+                <a href="{:U('Center/orders')}" title="返回全部订单">
+                    <div class="return"></div>
+                </a>
+
+            </div>
+
+            <div class="state"><!--状态框-->
+                <table border="0" cellspacing="0">
+                    <tr>
+                        <td colspan="3" class="col_580">订单编号：<span>{$order.orderid}</span></td>
+                        <td rowspan="3" class="col_200">
+                            <div class="state_right_top">支付状态：</div>
+                            <div class="state_right_bottom">
+                                <eq name="order.paystatus" value="0">订单未支付</eq>
+                                <eq name="order.paystatus" value="1">订单已支付</eq>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_247"><label>下单时间：{$order.createtime|date='Y-n-j G:i:s',###}</label></td>
+                        <td class="col_167">进 度：
+                         <span>
+                             <eq name="order.orderstatus" value="beforeauditing">未审核</eq>
+                             <eq name="order.orderstatus" value="auditing">审核中</eq>
+                             <eq name="order.orderstatus" value="processing">处理中</eq>
+                             <eq name="order.orderstatus" value="finished">关闭</eq>
+                        </span>
+                        </td>
+                        <td class="col_167">金 额：<span>￥{$order.realamount}</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="col_580">
+                            收件地址：<span>{$order.receiveraddress}({$order.receiverzipcode})</span> <span>{$order.receivername}({$order.receivermobile})</span>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="block">
+                <div class="subtitle">
+                    <span class="subtitle_left">订单明细</span>
+                    <span class="subtitle_right">
+                        <div class="btn btn_100">
+                            <a href="__ROOT__/unistu.php?m=Order&a=upload&orderid={$orderid}">修改</a>
+                        </div>
+                    </span>
+                </div>
+
+                <table border="0" cellspacing="1">
+                    <thead>
+                    <tr class="lab">
+                        <td class="col_100 border_right">照 片</td>
+                        <td class="col_100 border_right">序 号</td>
+                        <td class="col_100 border_right">姓 名</td>
+                        <td class="col_100 border_right">性 别</td>
+                        <td class="col_100 border_right">状 态</td>
+                        <td class="col_100 border_right">学 历</td>
+                        <td class="col_180 border_bottom">学 校</td>
+                    <tr>
+                    </thead>
+
+                    <tbody>
+                    <volist name="photolist" id="vo" key="k" empty='您还没有上传照片!'>
+                        <tr>
+                            <td class="col_100">
+                                <div class="subject">
+                                    <img src="{$vo.studentphoto}" onError="this.src='__PUBLIC__/images/nophoto.png';"/>
+                                </div>
+                            </td>
+                            <td class="col_100">{$k}</td>
+                            <td class="col_100">{$vo.studentname}</td>
+                            <td class="col_100">{$vo.studentgender}</td>
+                            <td class="col_100">
+                                <label>
+                                    <eq name="vo.studentstatus" value="-1">审核未通过</eq>
+                                    <eq name="vo.studentstatus" value="0">未审核</eq>
+                                    <eq name="vo.studentstatus" value="1">审核中</eq>
+                                    <eq name="vo.studentstatus" value="2">审核通过</eq>
+                                    <eq name="vo.studentstatus" value="3">制版</eq>
+                                    <eq name="vo.studentstatus" value="4">已寄出</eq>
+                                </label>
+                                <label class="err">
+                                    <notempty name="vo.message" value="">（{$vo.message}）</notempty>
+                                </label>
+                            </td>
+                            <td class="col_100">{$vo.studenteducationbg}</td>
+                            <td class="col_180">{$vo.studentschoolname}</td>
+                        <tr>
+                    </volist>
+                    </tbody>
+
+                    <tfoot>
+                    <td colspan="7">
+                        <div class="page">
+                            <span>&lt;</span>
+                            <a href="#" class="a1">1</a>
+                            <span>&gt;</span>
+                        </div>
+                    </td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--中心 end-->
+
+<!--底部信息 begin-->
+<include file="./App_Shares/Tpl/Index/footer.html"/>
+<!--底部信息 end-->
+
+</div>
+
+</body>
+</html>

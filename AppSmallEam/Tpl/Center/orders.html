@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>个人中心</title>
+    <link media="screen" type="text/css" rel="stylesheet" href="../Public/css/order-style.css"/>
+<!---->
+</head>
+
+
+<body>
+<div id="wrapper">
+    <!--头部 begin-->
+    <include file="./App_Shares/Tpl/Index/header.html"/>
+    <!--头部 end-->
+
+    <!--中心-->
+    <div id="center">
+        <div class="select">                 <!--左选择框-->
+            <div class="select-size">           <!--我的资料-->
+                <a href="{:U('Center/personal')}" class="select1"></a>
+            </div>
+            <div class="select-size">           <!--我的订单-->
+                <a href="#"><img src="../Public/images/select6-1.jpg"/></a>
+            </div>
+            <div class="select-size">           <!--安全中心-->
+                <a href="#" class="select2"></a>
+            </div>
+            <div class="select-size">            <!--余额管理-->
+                <a href="#" class="select3"></a>
+            </div>
+            <div class="select-size">            <!--我要推广-->
+                <a href="#" class="select4"></a>
+            </div>
+            <div class="select-size">            <!--帮助中心-->
+                <a href="#" class="select5"></a>
+            </div>
+        </div>
+        <div class="information">
+            <div class="title" > <!--标题-->
+                <label>&nbsp;&nbsp;</label>
+                <!--<a style="margin: 400px,0px,0px,0px" href="__ROOT__/unistu.php?m=Order&a=upload&productid={$productid}">新建订单(毕业照制作)</a>-->
+            </div>
+
+            <div class="block">
+
+                <table border="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th class="col_1">序 号</th>
+                        <th class="col_3">订单类别</th>
+                        <th class="col_4">金 额</th>
+                        <th class="col_2">创建时间</th>
+                        <th class="col_5">支 付</th>
+                        <th class="col_6">支付时间</th>
+                        <th class="col_7">状 态</th>
+                        <th class="col_8">详细信息</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <volist name="orderlist" id="vo" key="k" empty='您还没有订单!'>
+                        <tr>
+                            <td class="">
+                                <a href="__ROOT__/index.php?m=Center&a=orderdetail&orderid={$vo.orderid}"
+                                   title="订单号：{$vo.orderid} &#13;收件人：{$vo.receivername} &#13;收件地址：{$vo.receiveraddress}">
+                                    {$k}
+                                </a>
+                            </td>
+
+                            <td class="">
+                                <eq name="vo.orderfor" value="unistu">影像采集</eq>
+                            </td>
+                            <td class="">￥{$vo.totalamount}</td>
+                            <td class="">{$vo.createtime}</td>
+
+                            <td class="">
+                                <eq name="vo.paystatus" value="0">未付</eq>
+                                <eq name="vo.paystatus" value="1">已付</eq>
+                            </td>
+                            <td class="">{$vo.paytime}</td>
+                            <td class="">
+                                <eq name="vo.orderstatus" value="beforeauditing">未审核</eq>
+                                <eq name="vo.orderstatus" value="auditing">审核中</eq>
+                                <eq name="vo.orderstatus" value="processing">处理中</eq>
+                                <eq name="vo.orderstatus" value="finished">关闭</eq>
+                            </td>
+                            <td class="">
+                                <a href="__ROOT__/index.php?m=Center&a=orderdetail&orderid={$vo.orderid}"
+                                   title="订单号：{$vo.orderid} &#13;收件人：{$vo.receivername} &#13;收件地址：{$vo.receiveraddress}">
+                                    订单明细
+                                </a>
+                            </td>
+                        </tr>
+                    </volist>
+
+
+                    </tbody>
+
+                    <tfoot>
+                    <tr>
+                        <td colspan="9" id="page">
+                            <span>&lt;</span>
+                            <a href="#" class="a1">1</a>
+                            <span>&gt;</span>
+                        </td>
+                    </tr>
+                    <tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!--中心 end-->
+
+    <!--底部信息 begin-->
+    <include file="./App_Shares/Tpl/Index/footer.html"/>
+    <!--底部信息 end-->
+
+</div>
+
+</body>
+</html>

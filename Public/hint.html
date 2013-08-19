@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='Refresh' content='{$waitSecond};URL={$jumpUrl}'>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/hint.css"/>
+    <title>提示信息</title>
+</head>
+
+<body>
+<!--主体-->
+<div id="wrpper">
+    <!--头-->
+    <div id="header">提 示</div>
+    <!--头 end-->
+
+    <!--内文-->
+    <div id="content">
+        <table border="0" cellspacing="0">
+            <tr>
+                <present name="message">
+                    <td class="content_left"><img src="__PUBLIC__/images/success.png"/></td>
+                    <td class="content_right">{$message}</td>
+                    <else/>
+                    <td class="content_left"><img src="__PUBLIC__/images/failer.png"/></td>
+                    <td class="content_right">{$error}</td>
+                </present>
+            </tr>
+        </table>
+    </div>
+    <!--内文 end-->
+
+    <!--底部-->
+    <div id="footer">系统将在<b id="wait">{$waitSecond}</b>秒后自动跳转，如果不想等待，直接
+        <a id="href" href="{$jumpUrl}">点击这里</a>跳转。
+    </div>
+    <!--底部 end-->
+
+</div>
+<!--主体 end-->
+
+<script type="text/javascript">
+    (function () {
+        var wait = document.getElementById('wait'), href = document.getElementById('href').href;
+        var interval = setInterval(function () {
+            var time = --wait.innerHTML;
+            if (time <= 0) {
+                location.href = href;
+                clearInterval(interval);
+            }
+            ;
+        }, 1000);
+    })();
+</script>
+
+</body>
+</html>
+
